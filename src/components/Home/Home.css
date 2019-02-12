@@ -1,0 +1,28 @@
+.featured_product {
+    display: block;
+    border: solid 
+}
+
+.allVisors {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between
+}
+
+.map.product {
+    border: solid black;
+    
+}
+
+.featured_img {
+    width: 375px;
+    border: solid;
+}
+
+.visor_info {
+    display: flex;
+    height: 25px;
+    border: solid;
+    font-size: 20px;
+    font-weight: 400;
+}

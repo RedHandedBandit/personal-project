@@ -1,0 +1,1 @@
+select * from van_scotty;

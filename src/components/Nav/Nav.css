@@ -1,0 +1,51 @@
+.nav {
+    height: 125px;
+    border: solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo_btn {
+    display: flex;
+    border: solid;
+    cursor: pointer;
+}
+
+.all_btn {
+    border: solid;
+    padding: 5px;
+    height: 75px;
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_btn {
+   border: solid;
+   display: flex;
+   width: 450px;
+   align-items: center;
+   justify-content: space-around;
+   font-family:  'Segoe UI', 'Open Sans', 'Helvetica Neue'
+   
+}
+
+.sec_btn {
+    border: solid;
+    display: flex;
+    width: 300px;
+    align-items: center;
+   justify-content: center;
+}
+
+.nav_icon {
+    margin: 5px;
+}
+
+.nav_button {
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: .5px;
+}
