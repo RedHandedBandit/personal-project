@@ -1,0 +1,48 @@
+.all_Products {
+    border: solid;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    margin-top: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dp_all {
+    border: solid;
+}
+
+.header {
+    border: solid;
+    display: flex;
+    margin-left: 10px;
+    font-size: 34px;
+    padding-top: 20px;
+}
+
+.p_tag {
+    border: solid;
+    display: flex;
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.mapped_product {
+    border: solid;
+}
+
+.prod_img {
+    border: solid;
+    display: flex;
+    flex-wrap: wrap;
+    width: 275px;
+}
+
+.prod_info {
+    display: flex;
+    height: 25px;
+    border: solid;
+    font-size: 20px;
+    font-weight: 400;
+}

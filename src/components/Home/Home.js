@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import './Home.css';
+import img from './../../Ad_photos/tysanSlide.jpg'
+
+
 
 class Home extends Component {
     constructor(){
@@ -12,7 +15,7 @@ class Home extends Component {
 
     componentDidMount(){
         axios.get('/api/home').then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({ visors: res.data })
         })
     }
@@ -32,7 +35,10 @@ class Home extends Component {
         })
         return(
             <div className="featured_product"> 
-                <div> Featured </div>
+            <div > 
+                <img className="white_leather" alt="white_leather" src={img}/> 
+            </div>
+                <div className="feat"> FEATURED </div>
                 <div className="allVisors"> 
                 {allVisors}
                 </div>

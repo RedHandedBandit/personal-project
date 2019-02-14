@@ -7,6 +7,8 @@ import Contact from './components/Contact/Contact';
 import Login from './components/Login/Login';
 import Cart from './components/Cart/Cart';
 import Nav from './components/Nav/Nav'
+import Products from './components/Visor/Products';
+import Register from './components/Login/Register';
 
 export default (
     <div> 
@@ -18,6 +20,8 @@ export default (
             <Route path="/contact" component={Contact} /> 
             <Route path="/account" component={Login} /> 
             <Route path='/cart' component={Cart} /> 
+            <Route path='/product/:id' component={Products} />
+            <Route path='/register' component={Register} />
         </Switch>
     </div>
 )
