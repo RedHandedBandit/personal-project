@@ -3,12 +3,14 @@ import {connect} from 'react-redux';
 import axios from 'axios';
 import './Home.css';
 import img from './../../Ad_photos/tysanSlide.jpg'
+import visorImage from './../../Ad_photos/visor_sunset.jpg'
+import {gangMember} from './../../ducks/reducer'
 
 
 
 class Home extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             visors: []
         }
@@ -19,6 +21,14 @@ class Home extends Component {
             // console.log(res.data)
             this.setState({ visors: res.data })
         })
+        const {username_id} = this.props
+        if(!username_id){
+            axios.get('/api/user')
+            .then(res => {
+                this.props.gangMember(res.data)
+            })
+            .catch(error => console.log('nope', error))
+        }
     }
 
 
@@ -44,11 +54,22 @@ class Home extends Component {
                 <div className="feat"> FEATURED </div>
                 <div className="allVisors"> 
                 {allVisors}
-                </div>
+            </div>
+                <img className="ourstory_img" alt="city_sunset" src={visorImage} /> 
             </div>
         )
     }
 }
 
+const mapStateToProps = reduxState => {
+    const {username_id} = reduxState
+    return {
+        username_id
+    }
+}
+const dispatchToProps = {
+    gangMember
+}
 
-export default connect()(Home)
+
+export default connect(mapStateToProps, dispatchToProps)(Home)

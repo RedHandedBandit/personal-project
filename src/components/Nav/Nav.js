@@ -40,7 +40,6 @@ const Nav = function(props) {
                         {first_name && <div> 
                             welcome, {first_name} {last_name}
                         </div>}
-
                     </span>
                 </div>
                 {/* this is the cart component */}

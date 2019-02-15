@@ -23,6 +23,8 @@ app.get('/api/visors/:id', ctrl.oneProduct)
 //endpoints for auth
 app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.login)
+app.post('/auth/logout', authCtrl.logout)
+app.get('/api/user', authCtrl.userData)
 
 const port = process.env.SERVER_PORT || 4000
 massive(process.env.CONNECTION_STRING).then(db => {

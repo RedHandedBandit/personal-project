@@ -3,6 +3,12 @@
     border: solid 
 }
 
+.ourstory_img {
+    width: 100vw;
+    height: 740px;
+    margin-top: 60px;
+}
+
 .feat {
     display: flex;
     font-size: 30px;

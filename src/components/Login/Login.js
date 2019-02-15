@@ -30,6 +30,15 @@ class Login extends Component {
         }).catch(error => console.log('loser cant login', error))
     }
 
+    logout = () => {
+        axios.post('/auth/logout')
+        .then(res => {
+            this.props.gangMember({})
+            this.props.history.push('/')
+        })
+        .catch(error => console.log(error))
+    }
+
 
     render(){
         const {email, password} = this.state
@@ -58,6 +67,7 @@ class Login extends Component {
 
                     <p> 
                         <button className="signIn_btn" onClick={this.login} > Sign In </button> 
+                        <button className="logout_btn" onClick={this.logout}> Logout </button>
                     </p>
 
                     <p> 

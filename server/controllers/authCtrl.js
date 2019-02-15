@@ -40,11 +40,25 @@ module.exports = {
         if(user) {
             delete user.password
             session.user = user
-
+            // console.log({session})
             res.status(200).send(session.user)
         }else {
             return res.sendStatus(401)
         }
 
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        res.sendStatus(200)
+    },
+
+    userData: (req, res) => {
+        const {user} = req.session
+        if(user){
+            res.status(200).send(user)
+        }else{
+            res.sendStatus(418)
+        }
     }
 }
