@@ -75,8 +75,8 @@ class SwipeableTemporaryDrawer extends React.Component {
             onKeyDown={this.toggleDrawer('right', false)}
           >
           {newCart} 
-            <Link to="/api/checkout"> {sideList} </Link>
-              {console.log(this.props)}
+            <Link to="/checkout"> {sideList} </Link>
+              
           </div>
         </SwipeableDrawer>
 
