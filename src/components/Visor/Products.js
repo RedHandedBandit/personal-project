@@ -39,6 +39,7 @@ class Products extends Component {
         return (
             <div>
                 {visorDisplay}
+                <button> Add to Cart </button> 
             </div> 
         )
     }

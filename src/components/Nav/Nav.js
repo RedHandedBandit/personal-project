@@ -1,16 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Nav.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserAlt, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import {connect} from 'react-redux';
+import Cart from './../Cart/Cart'
+import SwipableTemporaryDrawer from './../Cart/SwipableDrawer/SwipeableTemporaryDrawer'
+
 
 
 library.add(faUserAlt, faShoppingBag)
 
 const Nav = function(props) {
     const {first_name, last_name} = props
+    const [hidden, setHidden] = useState(true)
     return(
         <header> 
             <div className="nav"> 
@@ -23,6 +27,7 @@ const Nav = function(props) {
                         <Link to="/story" > <button className="nav_button"> OUR STORY </button> </Link>
                         <Link to="/contact" > <button className="nav_button"> CONTACT </button> </Link>
                     </span>
+                    
                     <span className="sec_btn">
 
                         <Link to="/account" > 
@@ -31,18 +36,16 @@ const Nav = function(props) {
                             </button> 
                         </Link>
 
-                        <Link to="/cart" > 
-                            <button className="nav_icon"> 
-                                <FontAwesomeIcon icon="shopping-bag" />  
-                            </button> 
-                        </Link>
-
+                            <SwipableTemporaryDrawer/> 
+                        
                         {first_name && <div> 
                             welcome, {first_name} {last_name}
                         </div>}
 
                     </span>
                 </div>
+                {/* this is the cart component */}
+                <Cart hidden={hidden} setHidden={setHidden}/>
             </div>
         </header>
     )
@@ -57,3 +60,4 @@ const mapStateToProps = (reduxState) => {
 }
 
 export default connect(mapStateToProps)(Nav)
+                            
