@@ -1,13 +1,13 @@
 const initialState = {
-    user: {
         username_id: '',
         first_name: '',
         last_name: '',
         email: '',
-        password: ''
-    }
+        password: '',
+        cart: []
 }
 
+const ADD_CART = 'ADD_CART'
 const GANG_MEMBER = 'GANG_MEMBER';
 
 export function gangMember(gangObj){
@@ -17,16 +17,26 @@ export function gangMember(gangObj){
     }
 }
 
+export function addCart(item){
+    return {
+        type: ADD_CART,
+        payload: item
+    }
+}
+
 export default function reducer (state = initialState, action){
     const {type, payload} = action 
     switch(type){
         case GANG_MEMBER:
-        const newState = {...state}
-        newState.user = payload
-        return newState
+        return {...state, payload}
         // const {username_id: id, first_name: first, last_name: last} = payload;
         // return {...state, id, first, last}
+        case ADD_CART: 
+        const cartState = {...state}
+        cartState.cart.push(payload)
+        return cartState
     default:
+        console.log('default')
         return state;
     }
 }

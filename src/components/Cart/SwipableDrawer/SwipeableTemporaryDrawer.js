@@ -9,6 +9,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Cart from '@material-ui/icons/LocalGroceryStoreOutlined'
+import { connect } from 'react-redux';
 
 const styles = {
   list: {
@@ -31,6 +32,16 @@ class SwipeableTemporaryDrawer extends React.Component {
   };
 
   render() {
+    let newCart = this.props.cart.map(item => {
+      return (
+        <div key={item.product_id}> 
+          <img alt="cart_img" src={item.product_pic} /> 
+          <div> {item.product_name} </div>
+          <div> {item.product_price} </div>
+        </div>
+      )
+    })
+
     const { classes } = this.props;
 
     const sideList = (
@@ -63,9 +74,12 @@ class SwipeableTemporaryDrawer extends React.Component {
             onClick={this.toggleDrawer('right', false)}
             onKeyDown={this.toggleDrawer('right', false)}
           >
+          {newCart} 
             <Link to="/api/checkout"> {sideList} </Link>
+              {console.log(this.props)}
           </div>
         </SwipeableDrawer>
+
 
         <Button onClick={this.toggleDrawer('right', true)}> <Cart /> </Button>
 
@@ -78,4 +92,9 @@ SwipeableTemporaryDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SwipeableTemporaryDrawer);
+const mapStateToProps = (reduxState) => {
+  const {cart} = reduxState 
+  return {cart}
+}
+
+export default withStyles(styles)(connect(mapStateToProps)(SwipeableTemporaryDrawer));

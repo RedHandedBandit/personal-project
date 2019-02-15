@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux'
 import axios from 'axios';
+import {addCart} from './../../ducks/reducer'
 
 class Products extends Component {
     constructor(props){
@@ -15,6 +17,10 @@ class Products extends Component {
         .catch(error => console.log('wrong', error))
     }
 
+    addCart(){
+        this.props.addCart(this.state.visor[0])
+    }
+
     render(){
         let visorDisplay;
         const {visor} = this.state
@@ -26,24 +32,17 @@ class Products extends Component {
                 <div> {visor[0].product_price} </div>
             </div>
         }
-        // let visorDisplay = this.state.visor.map(visor => {
-        //     return (
-        //         <div key={visor.product_id} > 
-        //             <img alt="sngl_pic" src={`${visor.product_pic}`} />
-        //             <div> {visor.product_name} </div> 
-        //             <div> {visor.product_price} </div> 
-        //         </div>
-        //     )
-
-        // })
         return (
             <div>
                 {visorDisplay}
-                <button> Add to Cart </button> 
+                <button onClick={() => this.addCart()}> Add to Cart </button> 
             </div> 
         )
     }
 }
 
+const mapDispatchToProps = {
+    addCart
+}
 
-export default Products
+export default connect(null, mapDispatchToProps)(Products)

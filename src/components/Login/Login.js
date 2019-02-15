@@ -26,7 +26,7 @@ class Login extends Component {
         .then( res => {
             this.props.gangMember(res.data)
             this.props.history.push('/')
-            console.log(res.data)
+            // console.log(res.data)
         }).catch(error => console.log('loser cant login', error))
     }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 const Checkout = () => {
 
@@ -9,4 +10,9 @@ const Checkout = () => {
     )
 }
 
-export default Checkout
+const mapStateToProps = (reduxState) => {
+    const {cart} = reduxState 
+    return {cart}
+  }
+
+export default connect(mapStateToProps)(Checkout)

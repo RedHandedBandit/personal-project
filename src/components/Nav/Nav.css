@@ -49,10 +49,11 @@
 
 .nav_icon {
     margin: 10px;
+    padding: 10px;
     cursor: pointer;
-    font-size: 19px;
     width: 28px;
     border: none;
+    
 }
 
 .nav_button {

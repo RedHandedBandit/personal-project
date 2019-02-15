@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import axios from 'axios';
 import './Home.css';
 import img from './../../Ad_photos/tysanSlide.jpg'
@@ -21,7 +22,9 @@ class Home extends Component {
     }
 
 
+
     render(){
+        console.log(this.props)
         let allVisors = this.state.visors.map((visor) =>{
            return (
                <div className="map.product" key={visor.product_id}> 
@@ -48,4 +51,4 @@ class Home extends Component {
 }
 
 
-export default Home
+export default connect()(Home)

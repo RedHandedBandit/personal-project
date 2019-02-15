@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import './Nav.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserAlt, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import {connect} from 'react-redux';
-import Cart from './../Cart/Cart'
+import Login from '@material-ui/icons/PersonOutline'
 import SwipableTemporaryDrawer from './../Cart/SwipableDrawer/SwipeableTemporaryDrawer'
 
 
@@ -14,7 +13,7 @@ library.add(faUserAlt, faShoppingBag)
 
 const Nav = function(props) {
     const {first_name, last_name} = props
-    const [hidden, setHidden] = useState(true)
+    // const [hidden, setHidden] = useState(true)
     return(
         <header> 
             <div className="nav"> 
@@ -32,7 +31,7 @@ const Nav = function(props) {
 
                         <Link to="/account" > 
                             <button className="nav_icon"> 
-                                <FontAwesomeIcon icon="user-alt" /> 
+                                <Login /> 
                             </button> 
                         </Link>
 
@@ -45,14 +44,14 @@ const Nav = function(props) {
                     </span>
                 </div>
                 {/* this is the cart component */}
-                <Cart hidden={hidden} setHidden={setHidden}/>
+                {/* <Cart hidden={hidden} setHidden={setHidden}/> */}
             </div>
         </header>
     )
 }
 
 const mapStateToProps = (reduxState) => {
-    const {first_name, last_name} = reduxState.user
+    const {first_name, last_name} = reduxState
     return {
         first_name,
         last_name
