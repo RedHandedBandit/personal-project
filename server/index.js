@@ -2,7 +2,8 @@ const express = require('express');
 require('dotenv').config();
 const massive = require('massive');
 const ctrl = require('./controllers/controller');
-const authCtrl = require('./controllers/authCtrl')
+const authCtrl = require('./controllers/authCtrl');
+const cmntCtrl = require('./controllers/cmntCtrl');
 const session = require('express-session');
 
 const {SESSION_SECRET} = process.env;
@@ -25,6 +26,9 @@ app.post('/auth/register', authCtrl.register)
 app.post('/auth/login', authCtrl.login)
 app.post('/auth/logout', authCtrl.logout)
 app.get('/api/user', authCtrl.userData)
+
+// endpoints for contact
+app.get('/api/messages', cmntCtrl.getAll)
 
 const port = process.env.SERVER_PORT || 4000
 massive(process.env.CONNECTION_STRING).then(db => {

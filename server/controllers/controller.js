@@ -16,4 +16,5 @@ module.exports = {
             res.status(200).send(product)
         }).catch( err => console.log('sorry didnt work', err))
     },
+
 }
