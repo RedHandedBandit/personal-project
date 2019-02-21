@@ -29,8 +29,8 @@ export default function reducer (state = initialState, action){
     switch(type){
         case GANG_MEMBER:
         console.log(payload)
-        const {username_id, first_name, last_name} = payload;
-        return {...state, username_id, first_name, last_name };
+        const {username_id, first_name, last_name, email} = payload;
+        return {...state, username_id, first_name, last_name, email };
         // return {...state, id, first, last}
         case ADD_CART: 
         const cartState = {...state}

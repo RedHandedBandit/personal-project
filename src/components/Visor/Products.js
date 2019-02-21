@@ -6,7 +6,10 @@ import {addCart} from './../../ducks/reducer'
 class Products extends Component {
     constructor(props){
         super(props)
-        this.state = {visor: []}
+        this.state = {
+            visor: [],
+            quantity: 1,
+        }
     }
 
     componentDidMount(){
@@ -33,9 +36,35 @@ class Products extends Component {
             </div>
         }
         return (
-            <div>
-                {visorDisplay}
-                <button onClick={() => this.addCart()}> Add to Cart </button> 
+            <div className="visor_display" >
+
+                <div className="visor_info" > 
+                    {visorDisplay} 
+                </div>
+
+                <div className="quantity_section" > 
+                    <button> - </button>
+                    <input />
+                    <button> + </button>
+                </div>
+
+                <button className="addcart_btn"
+                onClick={() => this.addCart()}> 
+                    Add to Cart 
+                </button> 
+
+                <div className="listOfStuff" > 
+                    <li> 
+                        High Grade Velcro strap 
+                    </li>
+                    <li> 
+                        Supreme Comfort, Moisture-Wicking Technology 
+                    </li>
+                    <li> 
+                        Embroidered Logos 
+                    </li>
+                </div>
+
             </div> 
         )
     }

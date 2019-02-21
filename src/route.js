@@ -9,6 +9,7 @@ import Checkout from './components/Cart/Checkout'
 import Nav from './components/Nav/Nav'
 import Products from './components/Visor/Products';
 import Register from './components/Login/Register';
+import CmntBoard from './components/Contact/CmntBoard/CmntBoard';
 
 export default (
     <div> 
@@ -22,6 +23,7 @@ export default (
             <Route path='/checkout' component={Checkout} /> 
             <Route path='/product/:id' component={Products} />
             <Route path='/register' component={Register} />
+            <Route path="/comment" component={CmntBoard} />
         </Switch>
     </div>
 )

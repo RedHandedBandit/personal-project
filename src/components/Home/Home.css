@@ -46,3 +46,16 @@
     width: 100vw;
     height: 740px;
 }
+
+.text_area {
+    position: absolute;
+    border: solid;
+}
+
+.text_story {
+    border: solid;
+}
+
+.home_story {
+    border: solid;
+}

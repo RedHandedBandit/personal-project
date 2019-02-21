@@ -5,6 +5,7 @@ import './Home.css';
 import img from './../../Ad_photos/tysanSlide.jpg'
 import visorImage from './../../Ad_photos/visor_sunset.jpg'
 import {gangMember} from './../../ducks/reducer'
+import {Link} from 'react-router-dom'
 
 
 
@@ -48,18 +49,35 @@ class Home extends Component {
         })
         return(
             <div className="featured_product"> 
-            <div > 
-                <img className="white_leather" alt="white_leather" src={img}/> 
-            </div>
-                <div className="feat"> FEATURED </div>
-                <div className="allVisors"> 
-                {allVisors}
-            </div>
-                <img className="ourstory_img" alt="city_sunset" src={visorImage} /> 
+                <div > 
+                    <img className="white_leather" alt="white_leather" src={img}/> 
+                </div>
+                    <div className="feat"> FEATURED </div>
+                    <div className="allVisors"> 
+                    {allVisors}
+                </div>
+                <div > 
+                    <div className="sunset_img" > 
+                        <img className="ourstory_img" alt="city_sunset" src={visorImage} /> 
+                        <div> 
+                            <div className="text_area" > 
+                            <h2> OUR STORY </h2>
+                            <p className="text_story" > 
+                            It all began in Miami Florida, USA. Arguably the most colorful, loud, and diverse place in the world. It’s no surprise that the inspiration for VanScotty Visors came to us there…
+                            </p>
+                            <Link to="/story" > 
+                                <button className="home_story" > Our Story </button> 
+                            </Link>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         )
     }
 }
+
 
 const mapStateToProps = reduxState => {
     const {username_id} = reduxState

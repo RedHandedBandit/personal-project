@@ -6,12 +6,10 @@ const Checkout = (props) => {
        return ( 
     <div key={item.product_id}>
         <img alt="checkout_pic" src={`${item.product_pic}`} /> 
-        <div> {item.product_name} </div> 
-        <div> {item.product_price} </div>
+        <div> Name: {item.product_name} </div> 
+        <div> Price: {item.product_price} </div>
     </div>)
     })
-    console.log(checkoutCart)
-    console.log("hello", props)
     return (
     <div>
        {checkoutCart} 
