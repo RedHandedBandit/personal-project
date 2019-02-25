@@ -19,14 +19,20 @@ module.exports = {
 
     editMesh: (req, res) => {
         const db = req.app.get('db')
-
-        db.edit_cmnts({comment}).then(comments => {
+        const {comment, date} = req.body
+        // console.log(req.body)
+        const {id} = req.params
+        
+        db.edit_cmnts({comment, date, id}).then(comments => {
+            // console.log(comments)
             res.status(200).send(comments)
-        })
+            // console.log(comments)
+        }).catch(error => console.log('this sucks', error))
     },
 
     deleteMesh: (req, res) => {
         const db = req.app.get('db')
 
     }
+
 }

@@ -1,6 +1,4 @@
-insert into contact (
-    comment
-) values (
-    ${comment}
-)
-returning *;
+update contact 
+set comment = ${comment},
+    date = ${date}
+where cmnt_id = ${cmnt_id};

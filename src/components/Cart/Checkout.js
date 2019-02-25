@@ -23,3 +23,6 @@ const mapStateToProps = (reduxState) => {
   }
 
 export default connect(mapStateToProps)(Checkout)
+
+// Question : shopping cart quantity - adding to database
+// Solution : REDUX-PERSIST library

@@ -15,12 +15,11 @@ class Contact extends Component {
             name: '',
             date: new Date()
         }
+        // this.handleUpdate = this.handleUpdate.bind(this);
     }
 
     componentDidMount(){
-        axios.get('/api/messages').then( res =>
-            this.setState({comments: res.data})
-        )
+        this.getAllCmnts()
         const {username_id} = this.props
         if(!username_id){
             axios.get('/api/user')
@@ -42,6 +41,17 @@ class Contact extends Component {
         axios.post('/api/messages', {comment: this.state.comment, date: this.state.date.toString()})
     }
 
+    handleUpdate = () => {
+        this.getAllCmnts()
+        // this.setState({comments: val})
+    }
+
+    getAllCmnts = () => {
+        axios.get('/api/messages').then( res =>
+            this.setState({comments: res.data})
+        )
+    }
+
 
     render(){
         // console.log(this.props)
@@ -49,7 +59,7 @@ class Contact extends Component {
         // console.log('email', email)
         let post = this.state.comments.map((post) => {
             return (
-                <CmntBoard key={post.cmnt_id} info={post} />
+                <CmntBoard key={post.cmnt_id} info={post} updateList={this.handleUpdate} />
                 // <div key={post.cmnt_id}> 
                 //     <div> {post.first_name} {post.last_name} </div>
                 //     <div> {post.comment} </div>

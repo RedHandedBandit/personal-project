@@ -30,7 +30,7 @@ app.get('/api/user', authCtrl.userData)
 // endpoints for contact
 app.get('/api/messages', cmntCtrl.getAll)
 app.post('/api/messages', cmntCtrl.addPost)
-app.put('/api/editMesh/:id', cmntCtrl.editMesh)
+app.put(`/api/editMesh/:id`, cmntCtrl.editMesh)
 app.delete('/api/deleteMesh/:id',cmntCtrl.deleteMesh)
 
 const port = process.env.SERVER_PORT || 4000
