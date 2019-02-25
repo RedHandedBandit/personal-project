@@ -36,6 +36,10 @@ class CmntBoard extends Component {
     // id coming back as null
     // text not being saved
 
+    handleDelete(id){
+        this.props.deleteOne(id);
+    }
+
     render(){
         // console.log(this.props.info.cmnt_id)
         return(
@@ -54,7 +58,7 @@ class CmntBoard extends Component {
                             <button onClick={() => this.handleSubmit(this.props.info.cmnt_id)} > Submit </button>
                         </div>
                       }
-                      <button> Delete </button>
+                      <button onClick={() => {this.handleDelete(this.props.info.cmnt_id)}} > Delete </button>
                 </div>
             </div>
         )

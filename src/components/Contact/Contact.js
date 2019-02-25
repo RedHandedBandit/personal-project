@@ -52,6 +52,21 @@ class Contact extends Component {
         )
     }
 
+    deleteInfo = () => {
+        this.getAllCmnts()
+        // this.setState({comments: data})
+        // console.log(data)
+        // placing new data into comments
+    }
+
+    deleteCmnt = (id) => {
+        axios.delete(`/api/deleteMesh/${id}`).then( res => {
+            console.log("res.data stuff",res.data)
+            this.deleteInfo(res.data)
+        }).catch( error => console.log("didnt work in the front end", error))
+        //deleting a cmnt and then using deleteInfo to send back the remaining cmnts.
+    }
+
 
     render(){
         // console.log(this.props)
@@ -59,7 +74,7 @@ class Contact extends Component {
         // console.log('email', email)
         let post = this.state.comments.map((post) => {
             return (
-                <CmntBoard key={post.cmnt_id} info={post} updateList={this.handleUpdate} />
+                <CmntBoard key={post.cmnt_id} info={post} updateList={this.handleUpdate} deleteOne={this.deleteCmnt} />
                 // <div key={post.cmnt_id}> 
                 //     <div> {post.first_name} {post.last_name} </div>
                 //     <div> {post.comment} </div>
