@@ -10,6 +10,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Cart from '@material-ui/icons/LocalGroceryStoreOutlined'
 import { connect } from 'react-redux';
+import {updateQuantity} from './../../../ducks/reducer'
+// import Quantity from '../Quantity/Quantity';
 
 const styles = {
   list: {
@@ -21,9 +23,15 @@ const styles = {
 };
 
 class SwipeableTemporaryDrawer extends React.Component {
-  state = {
-    right: false,
-  };
+  // constructor(props){
+  //   super(props)
+    state = {
+      right: false,
+      // quantity: 1
+    };
+    // this.updateQuantity = this.updateQuantity.bind(this)
+  // }
+  
 
   toggleDrawer = (side, open) => () => {
     this.setState({
@@ -31,19 +39,34 @@ class SwipeableTemporaryDrawer extends React.Component {
     });
   };
 
+  // updateTheQuantity(direction){
+  //   if(direction === 'down' && this.state.quantity - 1 === 0){
+  //     return;
+  //   }
+  //   if(direction === 'up'){
+  //     this.setState({quantity: this.state.quantity + 1})
+  //   } else {
+  //     this.setState({quantity: this.state.quantity - 1})
+  //   }
+  // }
+
   render() {
     let newCart = this.props.cart.map(item => {
       return (
         <div key={item.product_id}> 
           <img alt="cart_img" src={item.product_pic} /> 
           <div> {item.product_name} </div>
-          <div> {item.product_price} </div>
+          <div> ${item.product_price * item.quantity}.00 </div>
+          <div> 
+            <button onClick={() => this.props.updateQuantity('down', item.product_id)} > - </button>
+            {item.quantity}
+            <button onClick={() => this.props.updateQuantity('up', item.product_id)} > + </button>
+          </div> 
         </div>
       )
     })
 
     const { classes } = this.props;
-
     const sideList = (
       <div className={classes.list}>
 
@@ -71,10 +94,11 @@ class SwipeableTemporaryDrawer extends React.Component {
           <div
             tabIndex={0}
             role="button"
-            onClick={this.toggleDrawer('right', false)}
+            // onClick={this.toggleDrawer('right', false)}
             onKeyDown={this.toggleDrawer('right', false)}
           >
           {newCart} 
+          {/* <Quantity /> */}
             <Link to="/checkout"> {sideList} </Link>
               
           </div>
@@ -93,8 +117,11 @@ SwipeableTemporaryDrawer.propTypes = {
 };
 
 const mapStateToProps = (reduxState) => {
-  const {cart} = reduxState 
-  return {cart}
+  const {cart, incrementIfCartUpdated} = reduxState 
+  return {cart, incrementIfCartUpdated}
+}
+const dispatchToProps = {
+  updateQuantity
 }
 
-export default withStyles(styles)(connect(mapStateToProps)(SwipeableTemporaryDrawer));
+export default withStyles(styles)(connect(mapStateToProps, dispatchToProps)(SwipeableTemporaryDrawer));

@@ -7,12 +7,14 @@ const Checkout = (props) => {
     <div key={item.product_id}>
         <img alt="checkout_pic" src={`${item.product_pic}`} /> 
         <div> Name: {item.product_name} </div> 
-        <div> Price: {item.product_price} </div>
+        <div> Price: {item.product_price * item.quantity} </div>
+        <div> Quantity: {item.quantity} </div>
     </div>)
     })
     return (
     <div>
        {checkoutCart} 
+       {/* <Quantity /> */}
     </div>
     )
 }

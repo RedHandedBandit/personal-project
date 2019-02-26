@@ -1,7 +1,42 @@
+
+
 .cmnt_board {
-    border: solid;
-    margin: 15px;
-    padding: 10px;
+    border: solid 1px 1px gray;
+    /* background-image: url('IMG_2344.jpg'); */
+    margin: 25px;
+    padding: 18px;
     font-family: Andale Mono, monospace;
-    font: bold;
+    /* box-shadow: 3px 3px 3px 3px gray; */
+    -moz-box-shadow: 3px 3px 5px 6px rgb(176, 175, 175);
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(176, 175, 175);
+    box-shadow: 3px 3px 5px 6px rgb(176, 175, 175);
+    background-color: rgb(252, 249, 249);
 }
+
+.editCmnt_btn {
+    background-color: black;
+    color: white;
+    padding: 9px;
+    margin: 4px;
+    font-size: 14px;
+    font-family: Gill Sans, sans-serif;
+}
+
+.delete_btn {
+    background-color: black;
+    color: white;
+    padding: 9px;
+    margin: 4px;
+    font-size: 14px;
+    font-family: Gill Sans, sans-serif;
+}
+
+.submit_btn {
+    background-color: black;
+    color: white;
+    padding: 9px;
+    margin: 4px;
+    font-size: 14px;
+    font-family: Gill Sans, sans-serif;
+}
+

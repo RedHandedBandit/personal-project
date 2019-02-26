@@ -10,6 +10,7 @@ class Products extends Component {
             visor: [],
             quantity: 1,
         }
+        this.updateQuantity = this.updateQuantity.bind(this)
     }
 
     componentDidMount(){
@@ -21,7 +22,19 @@ class Products extends Component {
     }
 
     addCart(){
-        this.props.addCart(this.state.visor[0])
+        const item = {...this.state.visor[0], quantity: this.state.quantity}
+        this.props.addCart(item)
+    }
+
+    updateQuantity(direction){
+        if(direction === 'down' && this.state.quantity - 1 === 0){
+            return;
+        }
+        if(direction === 'up'){
+            this.setState({quantity: this.state.quantity + 1})
+        } else {
+            this.setState({quantity: this.state.quantity - 1})
+        }
     }
 
     render(){
@@ -31,8 +44,12 @@ class Products extends Component {
             visorDisplay = 
             <div>
                 <img alt="sngl_pic" src={`${visor[0].product_pic}`}/>
-                <div> {visor[0].product_name} </div>
-                <div> {visor[0].product_price} </div>
+                <div className="productName_div" > {visor[0].product_name} </div>
+                <div className="productPrice_div" > ${visor[0].product_price * this.state.quantity}.00 </div>
+                <div className="quantity_div" > <button onClick={ () => this.updateQuantity('down')}> - </button>
+                      {this.state.quantity} 
+                      <button onClick={() => this.updateQuantity('up')}> + </button>
+                </div>
             </div>
         }
         return (
@@ -43,9 +60,8 @@ class Products extends Component {
                 </div>
 
                 <div className="quantity_section" > 
-                    <button> - </button>
-                    <input />
-                    <button> + </button>
+                
+                    
                 </div>
 
                 <button className="addcart_btn"

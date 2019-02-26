@@ -43,22 +43,24 @@ class CmntBoard extends Component {
     render(){
         // console.log(this.props.info.cmnt_id)
         return(
-            <div className="cmnt_board" > 
-                <h3> Name: {this.props.info.first_name} {this.props.info.last_name} </h3>
-                <h5> Comment: {this.props.info.comment} </h5>
-                <h5> Date: {this.props.info.date} </h5>
-                <div> {
-                        !this.state.editCmnt ?
-                        <button onClick={() => {this.handleClick()}} > edit comment </button> :
-                        <div> 
-                            <textarea 
-                                onChange={(e) => this.handleCmntChange(e.target.value)}
-                                value={this.state.comment}
-                            />
-                            <button onClick={() => this.handleSubmit(this.props.info.cmnt_id)} > Submit </button>
-                        </div>
-                      }
-                      <button onClick={() => {this.handleDelete(this.props.info.cmnt_id)}} > Delete </button>
+            <div className="cmntBoard_div"> 
+                <div className="cmnt_board" > 
+                    <h3> Name: {this.props.info.first_name} {this.props.info.last_name} </h3>
+                    <h5> Comment: {this.props.info.comment} </h5>
+                    <h5> Date: {this.props.info.date} </h5>
+                    <div> {
+                            !this.state.editCmnt ?
+                            <button className="editCmnt_btn" onClick={() => {this.handleClick()}} > EDIT COMMENT </button> :
+                            <div> 
+                                <textarea 
+                                    onChange={(e) => this.handleCmntChange(e.target.value)}
+                                    value={this.state.comment}
+                                />
+                                <button className="submit_btn" onClick={() => this.handleSubmit(this.props.info.cmnt_id)} > SUBMIT </button>
+                            </div>
+                        }
+                        <button className="delete_btn" onClick={() => {this.handleDelete(this.props.info.cmnt_id)}} > DELETE </button>
+                    </div>
                 </div>
             </div>
         )

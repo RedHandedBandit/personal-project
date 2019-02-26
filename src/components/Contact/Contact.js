@@ -83,11 +83,13 @@ class Contact extends Component {
             )
         })
         return(
-            <div>
-                <h5> EMAIL </h5> 
-                <p> {email} </p>
+            <div className="background_img">
+                <div className="top_divs" > 
+                    <div className="div_background"> <h5> EMAIL </h5> </div> 
+                    <div className="div_background"> <p> {email} </p> </div>
 
-                <h5> COMMENT </h5>
+                    <div className="div_background"> <h5> COMMENT </h5> </div>
+                </div>
 
                 <p> <textarea className="comment_box" 
                               placeholder="comment" 
@@ -100,7 +102,7 @@ class Contact extends Component {
                     <button onClick={this.postComment} > Post </button> 
                 </span>
 
-                <span> {post} </span>
+                <div  > {post} </div>
             </div>
         )
     }
