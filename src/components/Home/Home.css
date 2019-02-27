@@ -66,6 +66,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center, center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.ourStory_box {
+    background-color: white;
+    height: 375px;
+    width: 380px;
+    font-size: 17px;
+    margin-right: 10%;
 }
 
 .text_area {
@@ -73,10 +84,7 @@
     height: 375px;
     width: 380px;
     font-size: 17px;
-    display: block;
-    position: relative;
-    left: 930px;
-    top: 100px;
+    margin-right: 100px;
 }
 
 @media(max-width: 1300px){

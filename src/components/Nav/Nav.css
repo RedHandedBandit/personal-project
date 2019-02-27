@@ -8,10 +8,9 @@
     align-items: center;
     justify-content: space-around;
     box-sizing: border-box;
-    /* position: fixed; */
-    /* scroll-behavior: fixed; */
-    /* transition-delay: 0s;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1) */
+    /* position: fixed;
+    top: 0;
+    overflow: hidden; */
 }
 
 .logo_btn {
@@ -92,7 +91,7 @@
     }
 }
 
-@media(mx-width: 770px){
+@media(max-width: 770px){
     /* .all_btn{
         flex-direction: column;
     } */

@@ -1,0 +1,122 @@
+.visor_display {
+    border: black solid;
+    height: 100vh;
+    width: 100vw;
+}
+
+.visor_display {
+    border: red solid;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+.sngl_pic {
+    border: blue solid;
+    height: 375px;
+    margin: 2px;
+}
+
+.npq_header {
+    border: blue solid;
+    margin: 2px;
+    padding-left: 30px;
+}
+
+.productName_div {
+    border: rgb(238, 110, 13) solid;
+    margin: 2px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.productPrice_div {
+    border: rgb(238, 110, 13) solid;
+    margin: 2px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.quantity_div {
+    border: rgb(238, 110, 13) solid;
+    margin: 2px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.addcart_btn {
+    border: rgb(238, 110, 13) solid;
+    height: 42px;
+    width: 98%;
+    margin: 2px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.listOfStuff {
+    border: rgb(238, 110, 13) solid;
+    margin: 2px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: .4px;
+    line-height: 27px;
+    list-style-image: none;
+    list-style-position: outside;
+    margin-bottom: 20px;
+    text-size-adjust: 100%;
+    /* display: flex;
+    justify-content: flex-start;
+    flex-direction: column; */
+}
+
+.renderingVisor_div {
+    border: purple solid;
+    margin: 2px;
+    display: flex;
+}
+
+.allVisor_info_forSingleProduct {
+    border: green solid;
+    margin: 2px;
+    height: 95%;
+}
+
+.q_label {
+    border: turquoise solid;
+    margin: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.quantity_btn {
+    border: turquoise solid;
+    margin: 2px;
+    font-size: 17px;
+}
+.quantity_num {
+    border: turquoise solid;
+    margin: 2px;
+    font-size: 17px;
+}
+
+.descriptionOfProduct {
+    border: turquoise solid;
+    margin: 2px;
+    display: list-item;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+}
+

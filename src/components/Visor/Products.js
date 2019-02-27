@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import axios from 'axios';
 import {addCart} from './../../ducks/reducer'
+import './Products.css'
 
 class Products extends Component {
     constructor(props){
@@ -42,43 +43,53 @@ class Products extends Component {
         const {visor} = this.state
         if(this.state.visor[0]) {
             visorDisplay = 
-            <div>
-                <img alt="sngl_pic" src={`${visor[0].product_pic}`}/>
-                <div className="productName_div" > {visor[0].product_name} </div>
-                <div className="productPrice_div" > ${visor[0].product_price * this.state.quantity}.00 </div>
-                <div className="quantity_div" > <button onClick={ () => this.updateQuantity('down')}> - </button>
-                      {this.state.quantity} 
-                      <button onClick={() => this.updateQuantity('up')}> + </button>
+            <div className="renderingVisor_div"> 
+                <div> 
+                    <img className="sngl_pic" alt="sngl_pic" src={`${visor[0].product_pic}`}/>
                 </div>
+                    <header className="npq_header"> 
+                        <h1 className="productName_div" > 
+                            {visor[0].product_name} 
+                        </h1>
+
+                        <div className="productPrice_div" > 
+                            ${visor[0].product_price * this.state.quantity}.00 
+                        </div>
+
+                        <div className="quantity_div" > 
+                            <span className="q_label" > QUANTITY </span>
+                            <span className="divForQ_Btn"> 
+                                <button className="quantity_btn" onClick={ () => this.updateQuantity('down')}> - </button>
+                                    <span className="quantity_num"> 
+                                        {this.state.quantity} 
+                                    </span>
+                                <button className="quantity_btn" onClick={() => this.updateQuantity('up')}> + </button>
+                            </span>
+                        </div>
+                        <button className="addcart_btn" onClick={() => this.addCart()}> 
+                            Add to Cart 
+                        </button> 
+
+                        <div className="listOfStuff" > 
+                            <li className="descriptionOfProduct"> 
+                                High Grade Velcro strap 
+                            </li>
+                            <li className="descriptionOfProduct"> 
+                                Supreme Comfort, Moisture-Wicking Technology 
+                            </li>
+                            <li className="descriptionOfProduct"> 
+                                Embroidered Logos 
+                            </li>
+                        </div>
+
+                    </header>
             </div>
         }
         return (
             <div className="visor_display" >
 
-                <div className="visor_info" > 
+                <div className="allVisor_info_forSingleProduct" > 
                     {visorDisplay} 
-                </div>
-
-                <div className="quantity_section" > 
-                
-                    
-                </div>
-
-                <button className="addcart_btn"
-                onClick={() => this.addCart()}> 
-                    Add to Cart 
-                </button> 
-
-                <div className="listOfStuff" > 
-                    <li> 
-                        High Grade Velcro strap 
-                    </li>
-                    <li> 
-                        Supreme Comfort, Moisture-Wicking Technology 
-                    </li>
-                    <li> 
-                        Embroidered Logos 
-                    </li>
                 </div>
 
             </div> 
