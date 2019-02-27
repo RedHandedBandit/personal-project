@@ -4,7 +4,7 @@ import './Nav.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserAlt, faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import {connect} from 'react-redux';
-import Login from '@material-ui/icons/PersonOutline'
+import LoginPerson from '@material-ui/icons/PersonOutline'
 import SwipableTemporaryDrawer from './../Cart/SwipableDrawer/SwipeableTemporaryDrawer'
 
 
@@ -31,7 +31,7 @@ const Nav = function(props) {
 
                         <Link to="/account" > 
                             <button className="nav_icon"> 
-                                <Login /> 
+                                <LoginPerson className="icon_loginPerson" /> 
                             </button> 
                         </Link>
 

@@ -1,6 +1,8 @@
 .comment_box {
     height: 200px;
-    width: 50%;
+    width: 500px;
+    position: relative;
+    
 }
 
 .background_img {
@@ -19,4 +21,10 @@
     align-content: center;
     margin: 10px;
     width: 500px;
+}
+
+.top_divs {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
 }

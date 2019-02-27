@@ -25,9 +25,9 @@ class CmntBoard extends Component {
             comment: this.state.newCmnt,
             date: new Date()
         }
-        console.log(id)
+        
         axios.put(`/api/editMesh/${id}`, text).then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             this.props.updateList(res.data);
             this.handleClick()
         }).catch( error => console.log(error))

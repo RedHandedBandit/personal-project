@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import './Home.css';
-import img from './../../Ad_photos/tysanSlide.jpg'
-import visorImage from './../../Ad_photos/visor_sunset.jpg'
 import {gangMember} from './../../ducks/reducer'
 import {Link} from 'react-router-dom'
 
@@ -49,8 +47,8 @@ class Home extends Component {
         })
         return(
             <div className="featured_product"> 
-                <div > 
-                    <img className="white_leather" alt="white_leather" src={img}/> 
+                <div className="white_leather"> 
+                    {/* <img className="white_leather" alt="white_leather" src={img}/>  */}
                 </div>
                     <div className="feat"> FEATURED </div>
                     <div className="allVisors"> 
@@ -58,8 +56,8 @@ class Home extends Component {
                 </div>
                 <div > 
                     <div className="sunset_img" > 
-                        <img className="ourstory_img" alt="city_sunset" src={visorImage} /> 
-                        <div> 
+                         
+                        <div className="ourStory_box"> 
                             <div className="text_area" > 
                             <h2> OUR STORY </h2>
                             <p className="text_story" > 

@@ -61,7 +61,7 @@ class Contact extends Component {
 
     deleteCmnt = (id) => {
         axios.delete(`/api/deleteMesh/${id}`).then( res => {
-            console.log("res.data stuff",res.data)
+            
             this.deleteInfo(res.data)
         }).catch( error => console.log("didnt work in the front end", error))
         //deleting a cmnt and then using deleteInfo to send back the remaining cmnts.
@@ -89,24 +89,24 @@ class Contact extends Component {
                     <div className="div_background"> <p> {email} </p> </div>
 
                     <div className="div_background"> <h5> COMMENT </h5> </div>
+
+                    <div className="div_background" > <textarea className="comment_box" 
+                                placeholder="comment" 
+                                onChange={(e) => {this.handleChange("comment", e.target.value)}}
+                                type="text"
+                                value={this.comments}
+                                />  
+                    </div>
+                    <span> 
+                        <button onClick={this.postComment} > Post </button> 
+                    </span>
                 </div>
-
-                <p> <textarea className="comment_box" 
-                              placeholder="comment" 
-                              onChange={(e) => {this.handleChange("comment", e.target.value)}}
-                              type="text"
-                              value={this.comments}
-                           />  
-                </p>
-                <span> 
-                    <button onClick={this.postComment} > Post </button> 
-                </span>
-
-                <div  > {post} </div>
+                <div> {post} </div>
             </div>
         )
     }
 }
+
 
 const mapStateToProps = reduxState => {
     const {username_id, email} = reduxState

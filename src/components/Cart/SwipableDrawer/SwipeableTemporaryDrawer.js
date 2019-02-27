@@ -10,7 +10,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Cart from '@material-ui/icons/LocalGroceryStoreOutlined'
 import { connect } from 'react-redux';
-import {updateQuantity} from './../../../ducks/reducer'
+import {updateQuantity, removeProduct} from './../../../ducks/reducer'
 // import Quantity from '../Quantity/Quantity';
 
 const styles = {
@@ -39,6 +39,10 @@ class SwipeableTemporaryDrawer extends React.Component {
     });
   };
 
+  removeFromCart = (item) => {
+    
+  }
+
   // updateTheQuantity(direction){
   //   if(direction === 'down' && this.state.quantity - 1 === 0){
   //     return;
@@ -54,6 +58,7 @@ class SwipeableTemporaryDrawer extends React.Component {
     let newCart = this.props.cart.map(item => {
       return (
         <div key={item.product_id}> 
+          <button onClick={() => this.props.removeProduct(item.product_id)} > x </button>
           <img alt="cart_img" src={item.product_pic} /> 
           <div> {item.product_name} </div>
           <div> ${item.product_price * item.quantity}.00 </div>
@@ -97,6 +102,7 @@ class SwipeableTemporaryDrawer extends React.Component {
             // onClick={this.toggleDrawer('right', false)}
             onKeyDown={this.toggleDrawer('right', false)}
           >
+
           {newCart} 
           {/* <Quantity /> */}
             <Link to="/checkout"> {sideList} </Link>
@@ -121,7 +127,8 @@ const mapStateToProps = (reduxState) => {
   return {cart, incrementIfCartUpdated}
 }
 const dispatchToProps = {
-  updateQuantity
+  updateQuantity,
+  removeProduct
 }
 
 export default withStyles(styles)(connect(mapStateToProps, dispatchToProps)(SwipeableTemporaryDrawer));

@@ -8,10 +8,10 @@ const initialState = {
     cart: []
 }
 
-const QUANTITY = 'QUANTITY'
 const ADD_CART = 'ADD_CART';
 const GANG_MEMBER = 'GANG_MEMBER';
-const UPDATE_QUANTITY = 'UPDATE_QUANTITY'
+const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
+const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
 export function gangMember(gangObj){
     return {
@@ -27,13 +27,6 @@ export function addCart(item){
     }
 }
 
-export function quantity(item){
-    return {
-        type: QUANTITY,
-        payload: item
-    }
-}
-
 export function updateQuantity(action, product_id){
    return{
     type: UPDATE_QUANTITY,
@@ -42,11 +35,17 @@ export function updateQuantity(action, product_id){
     
 }
 
+export function removeProduct(item){
+    return {
+        type: REMOVE_PRODUCT,
+        payload: item
+    }
+}
+
 export default function reducer (state = initialState, action){
     const {type, payload} = action 
     switch(type){
         case GANG_MEMBER:
-            console.log(payload)
             const {username_id, first_name, last_name, email} = payload;
             return {...state, username_id, first_name, last_name, email };
             // return {...state, id, first, last}
@@ -65,6 +64,12 @@ export default function reducer (state = initialState, action){
             }
             newState.incrementIfCartUpdated ++
             return newState;
+        case REMOVE_PRODUCT:
+            let newCartState = {...state}
+            let products = newCartState.cart.filter( item => payload !== item.product_id);
+            return Object.assign({}, newCartState, {
+                cart: products
+            })
             
         // case QUANTITY: 
             // const newQuantity = {...state}
@@ -73,7 +78,6 @@ export default function reducer (state = initialState, action){
             // itemCopy.quantity++;
             // return {...state, }
         default:
-            console.log('default')
             return state;
     }
 }

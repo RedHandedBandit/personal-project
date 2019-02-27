@@ -17,8 +17,6 @@ module.exports = {
         }
 
         let gangMember = await db.register(dbInfo)
-        console.log(dbInfo)
-        console.log({session})
         gangMember = gangMember[0];
         session.dbInfo = {...gangMember}
 
@@ -40,7 +38,6 @@ module.exports = {
         if(user) {
             delete user.password
             session.user = user
-            // console.log({session})
             res.status(200).send(session.user)
         }else {
             return res.sendStatus(401)
