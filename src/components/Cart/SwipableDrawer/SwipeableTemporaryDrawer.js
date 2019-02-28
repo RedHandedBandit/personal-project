@@ -11,6 +11,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Cart from '@material-ui/icons/LocalGroceryStoreOutlined'
 import { connect } from 'react-redux';
 import {updateQuantity, removeProduct} from './../../../ducks/reducer'
+import './SwipeableTemporaryDrawer'
 // import Quantity from '../Quantity/Quantity';
 
 const styles = {
@@ -97,6 +98,7 @@ class SwipeableTemporaryDrawer extends React.Component {
           onOpen={this.toggleDrawer('right', true)}
         >
           <div
+            className="return_allCart"
             tabIndex={0}
             role="button"
             // onClick={this.toggleDrawer('right', false)}

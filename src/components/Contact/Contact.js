@@ -98,7 +98,7 @@ class Contact extends Component {
                                 />  
                     </div>
                     <span> 
-                        <button onClick={this.postComment} > Post </button> 
+                        <button className="post_btn" onClick={this.postComment} > Post </button> 
                     </span>
                 </div>
                 <div> {post} </div>

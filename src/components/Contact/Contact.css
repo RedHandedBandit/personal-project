@@ -28,3 +28,18 @@
     flex-direction: column;
     align-content: flex-start;
 }
+
+.post_btn {
+    display: flex;
+    width: 75px;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 9px;
+    margin: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Gill Sans, sans-serif;
+    border: none;
+    cursor: pointer;
+}

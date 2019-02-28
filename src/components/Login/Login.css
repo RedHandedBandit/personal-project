@@ -1,0 +1,139 @@
+.login {
+    /* border: solid black; */
+    margin: 4px;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapping_red {
+    /* border: red solid; */
+    margin: 28px;
+    height: 80%;
+    width: 465px;
+}
+
+.h1_login {
+    /* border: blue solid; */
+    margin: 8px;
+    padding: 14px;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 45px;
+    display: flex;
+}
+
+.all_input {
+    /* border: blue solid; */
+    margin: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label_email {
+    /* border: green solid; */
+    margin: 8px;
+    padding: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+}
+
+.input_email {
+    /* border: green solid; */
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+}
+
+.label_password {
+    /* border: green solid; */
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.input_pass {
+    /* border: green solid; */
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+}
+
+.wrapping_login_logout {
+    /* border: green solid; */
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapping_createA {
+    /* border: green solid; */
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.allInput_Login_register {
+    /* border: rgb(238, 162, 48) solid; */
+    /* margin: 8px; */
+    padding: 4px;
+    height: 29px;
+    width: 100vw;
+    cursor: text;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.signIn_btn {
+    /* border: rgb(238, 162, 48) solid; */
+    margin: 8px;
+    padding: 4px;
+    width: 50%;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.logout_btn {
+    /* border: rgb(238, 162, 48) solid; */
+    margin: 8px;
+    padding: 4px;
+    height: 30px;
+    width: 50%;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.createAcc_btn {
+    /* border: rgb(238, 162, 48) solid; */
+    margin: 8px;
+    padding: 4px;
+    background-color: none;
+    font-size: 13px;
+    font-weight: 400px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.createAcc_link {
+    text-decoration: none;
+}

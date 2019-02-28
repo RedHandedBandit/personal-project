@@ -1,31 +1,31 @@
 .visor_display {
-    border: black solid;
+    /* border: black solid; */
     height: 100vh;
     width: 100vw;
 }
 
 .visor_display {
-    border: red solid;
+    /* border: red solid; */
     margin-top: 25px;
     margin-bottom: 25px;
 
 }
 
 .sngl_pic {
-    border: blue solid;
+    /* border: blue solid; */
     height: 375px;
     margin: 2px;
 }
 
 .npq_header {
-    border: blue solid;
+    /* border: blue solid; */
     margin: 2px;
     padding-left: 30px;
     width: 60%;
 }
 
 .productName_div {
-    border: rgb(238, 110, 13) solid;
+    /* border: rgb(238, 110, 13) solid; */
     display: flex;
     margin: 2px;
     font-size: 34px;
@@ -37,7 +37,7 @@
 }
 
 .productPrice_div {
-    border: rgb(238, 110, 13) solid;
+    /* border: rgb(238, 110, 13) solid; */
     margin: 2px;
     padding-bottom: 15px;
     font-size: 25px;
@@ -50,7 +50,7 @@
 }
 
 .quantity_div {
-    border: rgb(238, 110, 13) solid;
+    /* border: rgb(238, 110, 13) solid; */
     margin: 2px;
     margin-top: 30px;
     font-size: 17px;
@@ -63,7 +63,7 @@
 }
 
 .addcart_btn {
-    border: rgb(238, 110, 13) solid;
+    /* border: rgb(238, 110, 13) solid; */
     display: flex;
     justify-content: center;
     height: 42px;
@@ -77,7 +77,7 @@
 }
 
 .listOfStuff {
-    border: rgb(238, 110, 13) solid;
+    /* border: rgb(238, 110, 13) solid; */
     margin: 2px;
     margin-top: 65px;
     padding-left: 15px;
@@ -97,20 +97,20 @@
 }
 
 .renderingVisor_div {
-    border: purple solid;
+    /* border: purple solid; */
     margin: 2px;
     display: flex;
     height: 95%;
 }
 
 .allVisor_info_forSingleProduct {
-    border: green solid;
+    /* border: green solid; */
     margin: 2px;
     height: 95%;
 }
 
 .q_label {
-    border: turquoise solid;
+    /* border: turquoise solid; */
     margin: 2px;
     font-size: 13px;
     font-weight: 700;
@@ -118,18 +118,18 @@
 }
 
 .quantity_btn {
-    border: turquoise solid;
+    /* border: turquoise solid; */
     margin: 2px;
     font-size: 17px;
 }
 .quantity_num {
-    border: turquoise solid;
+    /* border: turquoise solid; */
     margin: 2px;
     font-size: 17px;
 }
 
 .descriptionOfProduct {
-    border: turquoise solid;
+    /* border: turquoise solid; */
     margin: 2px;
     display: list-item;
     font-size: 17px;
