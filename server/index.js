@@ -15,7 +15,7 @@ const stripe = require("stripe")(SECRET_KEY);
 
 
 // const app = express()
-
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(require("body-parser").text());
 app.use(express.json())
 app.use(session({
