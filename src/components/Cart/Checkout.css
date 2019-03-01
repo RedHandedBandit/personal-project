@@ -1,0 +1,105 @@
+.returning_div {
+    border: black solid;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.mappedProducts {
+    border: red solid;
+    margin-top: 8px;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.return_checkoutcart {
+    border: purple solid;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.allproduct_checkout {
+    border: blue solid;
+    margin: 8px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.removeProduct_div {
+    border: green solid;
+    margin: 8px;
+    padding: 4px;
+}
+
+.checkout_pic {
+    border: green solid;
+    margin: 8px;
+    padding: 4px;
+    height: 125px;
+}
+
+.product_name {
+    border: green solid;
+    margin: 8px;
+    padding: 4px;
+}
+
+.product_price {
+    border: green solid;
+    margin: 8px;
+    padding: 4px;
+}
+
+.product_quantity {
+    border: green solid;
+    margin: 8px;
+    padding: 4px;
+}
+
+/* stripe */
+
+.stripe_div {
+    border: red solid;
+    margin: 8px;
+    padding: 4px;
+}
+
+.practice {
+    border: blue solid;
+    width: 50%;
+    height: 98%;
+    margin: 8px;
+    padding: 4px;
+}
+
+.example {
+    
+    margin: 8px;
+    padding: 4px;
+    height: 75%;
+    -moz-box-shadow: 3px 3px 5px 6px rgb(176, 175, 175);
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(176, 175, 175);
+    box-shadow: 3px 3px 5px 6px rgb(176, 175, 175);
+    background-color: rgb(252, 249, 249);
+}
+
+.h1_stripe {
+    border: green solid;
+    margin: 8px;
+    padding: 4px;
+    height: 105px;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    letter-spacing: 3px;
+    font-size: 44px;
+    display: flex;
+    justify-content: center;
+}
+
+/* .elements_stripe {
+    border: green solid;
+} */

@@ -2,7 +2,7 @@
     /* height: 125px; */
     width: 100vw;
     padding: 25px;
-    border: solid black;
+    border-bottom: solid rgb(182, 182, 182) .05px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@
     width: 850px;
     display: flex;
     justify-content: space-between;
-    border: solid;
+    /* border: solid; */
 }
 
 .main_btn {
@@ -34,7 +34,7 @@
    align-items: center;
    justify-content: space-around;
    font-family:  'Segoe UI', 'Open Sans', 'Helvetica Neue';
-   border: solid
+   /* border: solid */
 }
 
 .sec_btn {
@@ -42,7 +42,7 @@
     width: 300px;
     align-items: center;
    justify-content: center;
-   border: solid
+   /* border: solid */
 }
 
 .nav_icon {

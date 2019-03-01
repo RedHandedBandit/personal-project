@@ -5,6 +5,7 @@ const initialState = {
     email: '',
     password: '',
     incrementIfCartUpdated: 1,
+    total: 0,
     cart: []
 }
 
@@ -70,13 +71,6 @@ export default function reducer (state = initialState, action){
             return Object.assign({}, newCartState, {
                 cart: products
             })
-            
-        // case QUANTITY: 
-            // const newQuantity = {...state}
-            // const {cart} = payload;
-            // const itemCopy = {...payload};
-            // itemCopy.quantity++;
-            // return {...state, }
         default:
             return state;
     }

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios'
 import {connect} from 'react-redux';
 import {gangMember} from './../../ducks/reducer';
+import './Register.css'
 
 class Register extends Component {
 
@@ -42,31 +43,41 @@ class Register extends Component {
             <div className="main_div"> 
                 <div className="reg_div"> 
                     <div className="regInput"> 
-                        <h1> Create Account </h1>
+                        <h1 className="h1_reg"> Create Account </h1>
+                            <div className="all_reg"> 
+                                <label className="all_labels_reg"> FIRST NAME </label>
 
-                        <label> FIRST NAME </label>
-                        <input onChange={(e) => this.handleChange('first_name', e.target.value)}
-                                type='text'
-                                value={first_name} />
+                                <input  className="all_input_reg"
+                                        onChange={(e) => this.handleChange('first_name', e.target.value)}
+                                        type='text'
+                                        value={first_name} />
 
-                        <label> LAST NAME </label>
-                        <input onChange={(e) => this.handleChange('last_name', e.target.value)}
-                                type='text'
-                                value={last_name} />
+                                <label className="all_labels_reg"> LAST NAME </label>
 
-                        <label> EMAIL </label>
-                        <input onChange={(e) => this.handleChange('email', e.target.value)}
-                                type='text'
-                                value={email} />
+                                <input  className="all_input_reg"
+                                        onChange={(e) => this.handleChange('last_name', e.target.value)}
+                                        type='text'
+                                        value={last_name} />
 
-                        <label> PASSWORD </label>
-                        <input onChange={(e) => this.handleChange('password', e.target.value)}
-                                type="password"
-                                value={password} />
+                                <label className="all_labels_reg"> EMAIL </label>
 
-                        <p> 
-                            <button onClick={this.register}> Create </button> 
-                        </p>
+                                <input  className="all_input_reg"
+                                        onChange={(e) => this.handleChange('email', e.target.value)}
+                                        type='text'
+                                        value={email} />
+
+                                <label className="all_labels_reg"> PASSWORD </label>
+
+                                <input  className="all_input_reg"
+                                        onChange={(e) => this.handleChange('password', e.target.value)}
+                                        type="password"
+                                        value={password} />
+
+                                <p> 
+                                    <button className="create_btn"
+                                            onClick={this.register}> Create </button> 
+                                </p>
+                            </div>
                     </div>
                 </div>
             </div>

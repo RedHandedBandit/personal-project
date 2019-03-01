@@ -87,6 +87,12 @@ class SwipeableTemporaryDrawer extends React.Component {
       </div>
     );
 
+    let totalPrice = this.props.cart.reduce((acc, item)=> {
+      if(item.product_price === 0){
+          return 'your cart is empty'
+      }else {return acc + (item.product_price * item.quantity)}
+      }, 0)
+
 // -------------------> Returning Everything <---------------------------------------
     return (
       <div>
@@ -107,6 +113,7 @@ class SwipeableTemporaryDrawer extends React.Component {
 
           {newCart} 
           {/* <Quantity /> */}
+          ${totalPrice}.00
             <Link to="/checkout"> {sideList} </Link>
               
           </div>

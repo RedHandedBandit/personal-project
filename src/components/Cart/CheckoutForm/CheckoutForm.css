@@ -1,0 +1,54 @@
+.purchase_complete {
+    border: green solid;
+}
+
+.checkout {
+    border: green solid;
+    margin: 8px;
+    padding: 4px;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.question_purch {
+    border: orange solid;
+    margin: 8px;
+    padding: 4px;
+    padding-top: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    position: center;
+    font-size: 19px;
+
+}
+
+.infoForCard {
+    border: lightgray solid .5px;
+    margin-top: 24px;
+    padding: 4px;
+}
+
+.infoForCard:hover {
+    /* -moz-box-shadow: 2px 2px 3px 3px rgb(74, 110, 255); */
+    /* -webkit-box-shadow: 5px 2px 3px 3px rgb(74, 110, 255); */
+    box-shadow: 1px 1px 2px 3px  rgb(74, 110, 255);
+    background-color: white;
+}
+
+.sendPurchase_btn {
+    border: orange solid;
+    border-radius: 5px;
+    margin: 8px;
+    padding: 4px;
+    background-color: rgba(1, 110, 227, 0.94);
+    width: 50%;
+    height: 34px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    position: center;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    letter-spacing: .5px;
+}
