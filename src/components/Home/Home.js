@@ -4,6 +4,7 @@ import axios from 'axios';
 import './Home.css';
 import {gangMember} from './../../ducks/reducer'
 import {Link} from 'react-router-dom'
+import bootStrap from 'react-bootstrap'
 
 
 

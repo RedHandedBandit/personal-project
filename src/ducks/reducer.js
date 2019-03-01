@@ -9,6 +9,7 @@ const initialState = {
     cart: []
 }
 
+const EMPTY_CART = 'EMPTY_CART'
 const ADD_CART = 'ADD_CART';
 const GANG_MEMBER = 'GANG_MEMBER';
 const UPDATE_QUANTITY = 'UPDATE_QUANTITY';
@@ -43,6 +44,13 @@ export function removeProduct(item){
     }
 }
 
+export function emptyCart(action){
+    return {
+        type: EMPTY_CART,
+        payload: action
+    }
+}
+
 export default function reducer (state = initialState, action){
     const {type, payload} = action 
     switch(type){
@@ -71,6 +79,9 @@ export default function reducer (state = initialState, action){
             return Object.assign({}, newCartState, {
                 cart: products
             })
+        case EMPTY_CART:
+            const newEmptyCart = {...state, cart: []}
+            return newEmptyCart;
         default:
             return state;
     }
