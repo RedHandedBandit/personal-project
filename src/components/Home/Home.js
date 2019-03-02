@@ -4,7 +4,9 @@ import axios from 'axios';
 import './Home.css';
 import {gangMember} from './../../ducks/reducer'
 import {Link} from 'react-router-dom'
-import bootStrap from 'react-bootstrap'
+// import {Carousel} from 'react-bootstrap'
+
+
 
 
 
@@ -49,24 +51,26 @@ class Home extends Component {
         return(
             <div className="featured_product"> 
                 <div className="white_leather"> 
-                    {/* <img className="white_leather" alt="white_leather" src={img}/>  */}
+                    
                 </div>
                     <div className="feat"> FEATURED </div>
                     <div className="allVisors"> 
-                    {allVisors}
-                </div>
-                <div > 
+                        
+                        {allVisors}
+                        
+                    </div>
+                <div> 
                     <div className="sunset_img" > 
                          
                         <div className="ourStory_box"> 
                             <div className="text_area" > 
-                            <h2> OUR STORY </h2>
-                            <p className="text_story" > 
-                            It all began in Miami Florida, USA. Arguably the most colorful, loud, and diverse place in the world. It’s no surprise that the inspiration for VanScotty Visors came to us there…
-                            </p>
-                            <Link to="/story" > 
-                                <button className="home_story" > Our Story </button> 
-                            </Link>
+                                <h2> OUR STORY </h2>
+                                <p className="text_story" > 
+                                It all began in Miami Florida, USA. Arguably the most colorful, loud, and diverse place in the world. It’s no surprise that the inspiration for VanScotty Visors came to us there…
+                                </p>
+                                <Link to="/story" > 
+                                    <button className="home_story" > Our Story </button> 
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -90,3 +94,41 @@ const dispatchToProps = {
 
 
 export default connect(mapStateToProps, dispatchToProps)(Home)
+                    // eslint-disable-next-line
+                    {/* <Carousel>
+                        <Carousel.Item >
+                            <img
+                            className="d-block w-100"
+                            src={tysan}
+                            alt="First slide"
+                            />
+                            <Carousel.Caption>
+                            <h3>ITS GUCCI</h3>
+                            <p>SHOP WHITE LEATHER</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6C-9aejPxWRUF9MaKb-JFHbjl9QAQpyi88n9qQ9T0PrlzvInwdA"}
+                            alt="Third slide"
+                            />
+
+                            <Carousel.Caption>
+                            <h3>STAND OUT</h3>
+                            <p>WEAR RED</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src={tennis}
+                            alt="Third slide"
+                            />
+
+                            <Carousel.Caption>
+                            <h3>"LONG LIVE THE VISOR"</h3>
+                            <p>#VISORGANG</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel> */}
