@@ -22,6 +22,57 @@ const styles = {
     width: 'auto',
   },
 };
+const visorPhoto = {
+  width: 100,
+  height: 'auto',
+  border: 'Solid',
+};
+
+const mapped_divForSwipable = {
+  border: 'solid',
+  display: 'flex',
+  height: 120,
+  justifyContent: 'space-around',
+  alignItems: 'center',
+}
+
+const productName_Quantity = {
+  border: 'dotted',
+  margin: 2,
+  fontSize: 20,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-around',
+  width: 120,
+}
+
+const productName_swipable = {
+  border: 'solid',
+  margin: 2,
+}
+
+const quantity_swipable ={
+  border: 'solid',
+  margin: 2,
+  display: 'flex',
+  justifyContent: 'space-between',
+}
+
+const productPrice_swipable = {
+  border: 'solid',
+  margin: 2,
+  fontSize: 17,
+  fontWeight: 400,
+}
+
+const totalPrice_checkoutBtn = {
+  border: 'solid',
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100vh',
+  marginTop: 50,
+  fontSize: 20,
+}
 
 class SwipeableTemporaryDrawer extends React.Component {
   // constructor(props){
@@ -58,16 +109,24 @@ class SwipeableTemporaryDrawer extends React.Component {
   render() {
     let newCart = this.props.cart.map(item => {
       return (
-        <div key={item.product_id}> 
-          <button onClick={() => this.props.removeProduct(item.product_id)} > x </button>
-          <img alt="cart_img" src={item.product_pic} /> 
-          <div> {item.product_name} </div>
-          <div> ${item.product_price * item.quantity}.00 </div>
-          <div> 
-            <button onClick={() => this.props.updateQuantity('down', item.product_id)} > - </button>
-            {item.quantity}
-            <button onClick={() => this.props.updateQuantity('up', item.product_id)} > + </button>
-          </div> 
+        <div style={mapped_divForSwipable} key={item.product_id}> 
+
+          <img style={visorPhoto} alt="cart_img" src={item.product_pic} /> 
+
+          <div style={productName_Quantity}>
+
+            <div style={productName_swipable}> {item.product_name} </div>
+            <div style={quantity_swipable}> 
+              <button onClick={() => this.props.updateQuantity('down', item.product_id)} > - </button>
+              {item.quantity}
+              <button onClick={() => this.props.updateQuantity('up', item.product_id)} > + </button>
+            </div> 
+          </div>
+          <div style={productPrice_swipable} > ${item.product_price * item.quantity}.00 </div>
+          <button className="remove_btn_cart" 
+              onClick={() => this.props.removeProduct(item.product_id)} > 
+              x 
+          </button>
         </div>
       )
     })
@@ -112,9 +171,11 @@ class SwipeableTemporaryDrawer extends React.Component {
           >
 
           {newCart} 
-          {/* <Quantity /> */}
-          ${totalPrice}.00
+          <div style={totalPrice_checkoutBtn}> 
+            <p> Total </p>${totalPrice}.00
             <Link to="/checkout"> {sideList} </Link>
+          </div>
+
               
           </div>
         </SwipeableDrawer>
