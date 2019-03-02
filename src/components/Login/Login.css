@@ -137,3 +137,12 @@
 .createAcc_link {
     text-decoration: none;
 }
+
+@media(max-width: 375px){
+    .Login {
+        width: 100%;
+    }
+    .wrapping_red {
+        width: 90%;
+    }
+}
