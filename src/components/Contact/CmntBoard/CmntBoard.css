@@ -40,3 +40,8 @@
     font-family: Gill Sans, sans-serif;
 }
 
+.cmnt_board_commentInfo {
+    border-top: lightgray solid;
+    border-bottom: lightgray solid;
+}
+

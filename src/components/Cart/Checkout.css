@@ -60,6 +60,10 @@
     margin: 8px;
     padding: 4px;
 }
+.thisIsForJerry {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* stripe */
 
@@ -100,6 +104,46 @@
     justify-content: center;
 }
 
-/* .elements_stripe {
-    border: green solid;
-} */
+@media(max-width: 375px){
+    .returning_div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .practice {
+        width: 100%;
+    }
+    .return_checkoutcart {
+        width: 98%;
+    }
+    .stripe_div {
+        height: 65%;
+    }
+    .example {
+        height: 100%;
+        margin: 8px;
+        padding: 4px;
+    }
+    .mappedProducts {
+        display: flex;
+    }
+    .allproduct_checkout {
+        display: flex;
+    }
+    .checkout_pic {
+        height: auto;
+        width: 65px;
+    }
+    .product_name {
+        font-size: 14px;
+    }
+    .product_price {
+        font-size: 14px;
+    }
+    .product_quantity {
+        font-size: 14px;
+    }
+    .removeProduct_btn {
+        font-size: 14px;
+    }
+}

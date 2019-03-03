@@ -43,3 +43,15 @@
     border: none;
     cursor: pointer;
 }
+
+@media(max-width: 375px){
+    .top_divs {
+        width: 100%;
+    }
+    .div_background {
+        width: 90%;
+    }
+    .comment_box {
+        width: 100%;
+    }
+}

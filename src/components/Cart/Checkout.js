@@ -16,14 +16,16 @@ const Checkout = (props) => {
 
         <div className="allproduct_checkout"> 
             <img className="checkout_pic" alt="checkout_pic" src={`${item.product_pic}`} /> 
-            <div className="product_name"> {item.product_name} </div> 
-            <div className="product_price"> Price: ${item.product_price * item.quantity}.00 </div>
-            <div className="product_quantity"> Quantity: {item.quantity} </div>
-            <div className="removeProduct_div"> 
-                <button className="removeProduct_btn"
-                        onClick={() => props.removeProduct(item.product_id)} > X
-                </button>
-                Remove 
+            <div className="thisIsForJerry"> 
+                <div className="product_name"> {item.product_name} </div> 
+                <div className="product_price"> ${item.product_price * item.quantity}.00 </div>
+                <div className="product_quantity"> Quantity: {item.quantity} </div>
+                <div className="removeProduct_div"> 
+                    <button className="removeProduct_btn"
+                            onClick={() => props.removeProduct(item.product_id)} > X
+                    </button>
+                    Remove 
+                </div>
             </div>
         </div> 
     </div>)

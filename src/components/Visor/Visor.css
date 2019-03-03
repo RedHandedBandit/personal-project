@@ -47,3 +47,17 @@
     font-size: 20px;
     font-weight: 400;
 }
+
+@media(max-width: 375px){
+    .all_Products {
+        width: 100%;
+        padding: 0px;
+        margin-top: 40px;
+    }
+    .prod_img {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
