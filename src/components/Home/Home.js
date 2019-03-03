@@ -19,7 +19,7 @@ class Home extends Component {
     }
 
     componentDidMount(){
-        axios.get('/api/home').then(res => {
+        axios.get('/api/featuredVisors').then(res => {
             // console.log(res.data)
             this.setState({ visors: res.data })
         })

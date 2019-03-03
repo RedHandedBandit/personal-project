@@ -17,4 +17,11 @@ module.exports = {
         }).catch( err => console.log('sorry didnt work', err))
     },
 
+    featuredInventory: (req, res) => {
+        const db = req.app.get('db')
+
+        db.get_featured_inventory().then(
+            inventory => res.status(200).send(inventory)
+        )
+    },
 }

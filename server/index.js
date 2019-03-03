@@ -25,6 +25,7 @@ app.use(session({
 }))
 
 //endpoints for products
+app.get('/api/featuredVisors', ctrl.featuredInventory)
 app.get('/api/home', ctrl.inventory)
 app.get('/api/visors/:id', ctrl.oneProduct)
 
