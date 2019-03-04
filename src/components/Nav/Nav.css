@@ -141,7 +141,14 @@
         flex-direction: column;
         justify-content: center;
         border: solid blue;
-        height: 100px;
+        height: 150px;
         width: 100%;
+    }
+    .main_btn {
+        border: red solid;
+        width: 110%;
+        height: 130px;
+        font-size: 13px;
+        display: flex;
     }
 }
