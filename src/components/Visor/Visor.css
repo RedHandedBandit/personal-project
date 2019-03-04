@@ -91,4 +91,7 @@ a {
         width: 90%;
         text-overflow: wrap;
     }
+    .mapped_product {
+        height: 180px;
+    }
 }
