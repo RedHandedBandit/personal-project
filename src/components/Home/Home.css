@@ -121,7 +121,7 @@
     }
 }
 
-@media(max-width: 375px){
+@media(max-width: 600px){
     .white_leather{
         width: 100%;
         height: 300px;

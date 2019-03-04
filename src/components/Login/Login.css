@@ -138,7 +138,7 @@
     text-decoration: none;
 }
 
-@media(max-width: 375px){
+@media(max-width: 600px){
     .Login {
         width: 100%;
     }

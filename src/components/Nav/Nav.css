@@ -133,7 +133,7 @@
     }
 } */
 
-@media(max-width: 375px){
+@media(max-width: 600px){
     .logo_btn {
         width: 185px;
         height: auto;

@@ -75,7 +75,7 @@ a {
     border: none;
 }
 
-@media(max-width: 375px){
+@media(max-width: 600px){
     .all_Products {
         width: 100%;
         padding: 0px;
