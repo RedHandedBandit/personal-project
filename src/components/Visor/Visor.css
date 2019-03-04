@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     text-decoration: none;
-    background-color: inherit;
+    background-color: none;
 }
 
 .dp_all {
@@ -32,13 +32,16 @@
     margin-left: 20px;
     font-size: 17px;
     font-weight: 400;
+    margin-top: 55px;
+    border-bottom: lightgray solid .5px;
+    width: 940px;
 }
 
 .mapped_product {
-    /* border: solid; */
+    border: solid;
     margin-bottom: 15px;
     background-color: none;
-    background: none;
+    background-color: white;
 }
 
 .prod_img {
@@ -46,16 +49,30 @@
     display: flex;
     flex-wrap: wrap;
     width: 275px;
+    background-color: none;
 }
 
 .prod_info {
     display: flex;
     height: 25px;
-    /* border: solid; */
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;
+    background-color: none;
+    border: none;
+}
+
+a {
     background-color: inherit;
+    color: black;
+    text-decoration-style: none;
+    text-decoration: none;
+    background: none;
+}
+
+.linkInVisor {
+    background-color: white;
+    border: none;
 }
 
 @media(max-width: 375px){
@@ -69,5 +86,9 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .p_tag {
+        width: 90%;
+        text-overflow: wrap;
     }
 }
