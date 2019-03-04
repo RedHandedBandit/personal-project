@@ -98,5 +98,7 @@ a {
     .linkInVisor {
         height: 180px;
         width: auto;
+        background-color: white;
+        border: none;
     }
 }
