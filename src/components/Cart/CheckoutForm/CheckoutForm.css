@@ -1,9 +1,9 @@
 .purchase_complete {
-    border: green solid;
+    /* border: green solid; */
 }
 
 .checkout {
-    border: green solid;
+    /* border: green solid; */
     margin: 8px;
     padding: 4px;
     height: 85%;
@@ -12,7 +12,7 @@
 }
 
 .question_purch {
-    border: orange solid;
+    border: orange solid .5px;
     margin: 8px;
     padding: 4px;
     padding-top: 10px;
@@ -38,7 +38,7 @@
 }
 
 .sendPurchase_btn {
-    border: orange solid;
+    border: orange solid .5px;
     border-radius: 5px;
     margin: 8px;
     padding: 4px;
@@ -51,4 +51,8 @@
     position: center;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
     letter-spacing: .5px;
+}
+
+.h1_stripe {
+    border-bottom: lightgray solid .5px;
 }

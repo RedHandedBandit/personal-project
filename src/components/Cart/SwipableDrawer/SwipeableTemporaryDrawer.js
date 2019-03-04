@@ -25,19 +25,20 @@ const styles = {
 const visorPhoto = {
   width: 100,
   height: 'auto',
-  border: 'Solid',
+  // border: 'Solid',
 };
 
 const mapped_divForSwipable = {
-  border: 'solid',
+  // border: 'solid',
   display: 'flex',
   height: 120,
   justifyContent: 'space-around',
   alignItems: 'center',
+  borderBottom: 'black solid .5px'
 }
 
 const productName_Quantity = {
-  border: 'dotted',
+  // border: 'dotted',
   margin: 2,
   fontSize: 20,
   display: 'flex',
@@ -47,26 +48,26 @@ const productName_Quantity = {
 }
 
 const productName_swipable = {
-  border: 'solid',
+  // border: 'solid',
   margin: 2,
 }
 
 const quantity_swipable ={
-  border: 'solid',
+  // border: 'solid',
   margin: 2,
   display: 'flex',
   justifyContent: 'space-between',
 }
 
 const productPrice_swipable = {
-  border: 'solid',
+  // border: 'solid',
   margin: 2,
   fontSize: 17,
   fontWeight: 400,
 }
 
 const totalPrice_checkoutBtn = {
-  border: 'solid',
+  // border: 'solid',
   display: 'flex',
   flexDirection: 'column',
   height: '100vh',
