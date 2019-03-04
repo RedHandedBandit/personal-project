@@ -44,7 +44,7 @@ class Products extends Component {
         if(this.state.visor[0]) {
             visorDisplay = 
             <div className="renderingVisor_div"> 
-                <div> 
+                <div className="div_wrappingImg"> 
                     <img className="sngl_pic" alt="sngl_pic" src={`${visor[0].product_pic}`}/>
                 </div>
                     <header className="npq_header"> 

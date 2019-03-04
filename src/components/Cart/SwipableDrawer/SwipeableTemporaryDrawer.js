@@ -16,7 +16,7 @@ import './SwipeableTemporaryDrawer'
 
 const styles = {
   list: {
-    width: 400,
+    width: 350,
   },
   fullList: {
     width: 'auto',
@@ -72,6 +72,14 @@ const totalPrice_checkoutBtn = {
   height: '100vh',
   marginTop: 50,
   fontSize: 20,
+}
+
+const sizeOfWholeCart = {
+  hideThisOnBigScreens: {
+    '@media screen and (min-width: 375px)':{
+      width: '75%'
+    }
+  }
 }
 
 class SwipeableTemporaryDrawer extends React.Component {
@@ -154,7 +162,7 @@ class SwipeableTemporaryDrawer extends React.Component {
 
 // -------------------> Returning Everything <---------------------------------------
     return (
-      <div>
+      <div style={sizeOfWholeCart}>
         
         <SwipeableDrawer
           anchor="right"

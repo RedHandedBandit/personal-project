@@ -144,3 +144,20 @@
     }
 }
 
+@media(max-width: 375px){
+    .div_wrappingImg {
+        height: 40%;
+    }
+    .listOfStuff {
+        width: 100%;
+        margin-left: 10px;
+    }
+    .renderingVisor_div {
+        display: flex;
+        flex-direction: column;
+    }
+    .sngl_pic {
+        width: 90%;
+    }
+}
+
