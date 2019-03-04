@@ -93,6 +93,10 @@ a {
     }
     .mapped_product {
         height: 180px;
-        width: 100%;
+        width: auto;
+    }
+    .linkInVisor {
+        height: 180px;
+        width: auto;
     }
 }
