@@ -50,26 +50,20 @@ class Home extends Component {
         })
         return(
             <div className="featured_product"> 
-                <div className="white_leather"> 
-                    
-                </div>
+                <div className="white_leather"> </div>
                     <div className="feat"> FEATURED </div>
-                    <div className="allVisors"> 
-                        
-                        {allVisors}
-                        
-                    </div>
+                    <div className="allVisors"> {allVisors} </div>
                 <div> 
                     <div className="sunset_img" > 
                          
                         <div className="ourStory_box"> 
                             <div className="text_area" > 
-                                <h2> OUR STORY </h2>
+                                <h2 className="h2_ourStory"> OUR STORY </h2>
                                 <p className="text_story" > 
                                 It all began in Miami Florida, USA. Arguably the most colorful, loud, and diverse place in the world. It’s no surprise that the inspiration for VanScotty Visors came to us there…
                                 </p>
                                 <Link to="/story" > 
-                                    <button className="home_story" > Our Story </button> 
+                                    <button className="home_story" > Read More </button> 
                                 </Link>
                             </div>
                         </div>

@@ -1,5 +1,7 @@
-
-
+.cmntBoard_div {
+    display: flex;
+    flex-direction: column-reverse;
+}
 .cmnt_board {
     border: solid 1px 1px gray;
     /* background-image: url('IMG_2344.jpg'); */
