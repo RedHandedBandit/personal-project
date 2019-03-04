@@ -18,7 +18,7 @@ const Nav = function(props) {
         <header> 
             <div className="nav">
             
-            <Link to="/" > <img className="logo_btn" src="https://cdn.shopify.com/s/files/1/0104/6895/0075/files/VSweblogo500_400x.jpg?v=1542058510" alt="logo" type="button" role="button" />  </Link>
+            <Link to="/" > <img className="logo_btn" src="https://cdn.shopify.com/s/files/1/0104/6895/0075/files/VSweblogo500_400x.jpg?v=1542058510" alt="logo" role="button" />  </Link>
 
                 <div className="all_btn"> 
                     <div className="main_btn"> 

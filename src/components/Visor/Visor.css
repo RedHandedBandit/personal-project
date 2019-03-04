@@ -80,6 +80,7 @@ a {
         width: 100%;
         padding: 0px;
         margin-top: 40px;
+        /* background-color: purple; */
     }
     .prod_img {
         width: 150px;
@@ -94,11 +95,13 @@ a {
     .mapped_product {
         height: 180px;
         width: auto;
+        border: red;
     }
     .linkInVisor {
         height: 180px;
         width: auto;
         background-color: white;
         border: none;
+        /* background-color: blue; */
     }
 }

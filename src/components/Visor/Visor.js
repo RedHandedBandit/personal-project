@@ -25,7 +25,7 @@ class Visor extends Component {
     render(){
         let Allvisors = this.state.visors.map(visor => {
             return (
-                <Link className="linkInVisor" to={`/product/${visor.product_id}`} key={visor.product_id}> <div className="mapped_product" type="button" > 
+                <Link className="linkInVisor" to={`/product/${visor.product_id}`} key={visor.product_id}> <div className="mapped_product" > 
                     <img className="prod_img" alt="" src={`${visor.product_pic}`}/>
                     <div className="prod_info"> {visor.product_name} </div>
                     <div className="prod_info"> ${visor.product_price}.00 </div>
